@@ -1,15 +1,14 @@
 version: '3.8'
 services:
   vue-app:
-    image: node:18-alpine
-    working_dir: /app
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
     ports:
       - "5173:5173"
     volumes:
-      - .:/app
+      - ./:/app
       - /app/node_modules
     environment:
       - NODE_ENV=development
-      - VITE_FORCE_POLLING=true
-      - CHOKIDAR_USEPOLLING=true
-    command: sh -c "yarn install && yarn dev"
+    command: yarn dev

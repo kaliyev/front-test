@@ -1,28 +1,22 @@
 {
-  "name": "vue-quasar-project",
-  "version": "1.0.0",
+  "name": "vue-project",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "webpack serve --config webpack.config.js --mode development --open --hot",
-    "build": "webpack --config webpack.config.js --mode production",
-    "serve": "npx serve dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.0",
-    "quasar": "^2.12.0",
-    "vue-router": "^4.2.0"
+    "pinia": "^3.0.3",
+    "quasar": "^2.18.1",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "webpack": "^5.0.0",
-    "webpack-cli": "^5.0.0",
-    "webpack-dev-server": "^4.0.0",
-    "vue-loader": "^17.0.0",
-    "@vue/compiler-sfc": "^3.4.0",
-    "html-webpack-plugin": "^5.0.0",
-    "css-loader": "^6.0.0",
-    "style-loader": "^3.0.0",
-    "babel-loader": "^9.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0"
+    "@vitejs/plugin-vue": "^6.0.0",
+    "vite": "^7.0.0",
+    "vite-plugin-vue-devtools": "^7.7.7"
   }
 }
